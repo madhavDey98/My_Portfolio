@@ -180,7 +180,6 @@ span.m-left {
 
 .skills h1, .contact h1 {
   color: blanchedalmond;
-  ;
   text-align: right;
   font-size: 10rem;
   opacity: .1;
@@ -332,6 +331,7 @@ footer p {
   padding-bottom: 3%;
 }
 
+/* This is for little Newer Mobile devices with bigger screen  */
 @media (max-width: 750px) {
   body{
     text-align: center;
@@ -374,7 +374,7 @@ footer p {
     top: -20rem;
     left: calc(100% - 5rem);
   }
-  .skills,.work h1 {
+  .skills h1,.work h1 {
     font-size: 8rem;
   }
   .skills {
@@ -391,6 +391,78 @@ footer p {
   }
   .work-category button{
     width: 9rem;
+  }
+  .showCategory{
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* This is for more smaller devices  */
+@media (max-width: 450px) {
+  body{
+    text-align: center;
+  }
+  .main-info-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text h1 {
+    font-size: 1.98em;
+  }
+  .text {
+    margin-top: 5rem;
+  }
+  .contact {
+    margin-bottom: 4rem;
+  }
+  .main-info-section {
+    height: 50rem;
+  }
+  .about {
+    height: 52rem;
+  }
+  .about h1 {
+    font-size: 7rem;
+  }
+  .about-me-info {
+    max-width: 20rem;
+    padding: 19px 6px;
+    position: relative;
+    top: -3rem;
+    left: 6.5rem;
+    right: 29%;
+    /* transform: translateX(-35%); */
+    z-index: 1;
+    margin-left: 0%;
+  }
+  .about img {
+    width: 13rem;
+    top: -14rem;
+    left: calc(100% - 12rem);
+  }
+  .skills h1,.work h1 {
+    font-size: 6rem !important;
+  }
+  .skills {
+    height: 63rem;
+  }
+  #contact form input {
+    width: 20rem;
+  }
+  #contact textarea {
+    width: 20rem;
+  }
+  #contact h1 {
+    font-size: 4.5rem;
+  }
+  .work-category button{
+    width: 7rem;
+    font-size: 11.5px;
+  }
+  .work a img{
+    width: 15rem;
   }
   .showCategory{
     display: flex !important;
