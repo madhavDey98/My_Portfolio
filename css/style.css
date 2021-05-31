@@ -5,74 +5,58 @@
   font-family: "PT Sans", sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.container{
-  padding: 0 100px 0 100px;
+.contain {
+  padding: 0 4rem 0 4rem;
 }
 
-nav ul,
-.main-info-section,
-.work-category {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-body{
+body {
   background-color: #252627;
 }
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px 0;
-}
-
-.navbar {
+#mainNavbar {
   background-color: #181818;
 }
 
-header h1,
-header a,
-.text p,
-.about h1,
-.skills h1,
-.work h1,
-.contact h1 {
+#mainNavbar h1, a {
   color: wheat;
 }
 
-li{
+li {
   list-style: none;
   margin-left: 30px;
 }
-a{
+
+a {
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
-  top: 50%;
+  /* top: 50%;
   bottom: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
 }
 
-.main-info-section{
-  height: calc(100vh - 81.6px);
+.main-info-section {
+  height: 32rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .text {
-  margin-top:120px;
+  margin-top: 120px;
 }
 
-.text h1{
+.text h1 {
   color: #fff;
-  font-size: 3rem;
-  cursor:content-menu;
+  /* font-size: 3rem; */
+  font-size: 4.5vw;
+  cursor: content-menu;
 }
 
 .text span {
@@ -89,7 +73,7 @@ span.name {
 }
 
 span.m-left {
-  margin-left:-10px;
+  margin-left: -10px;
 }
 
 .text p {
@@ -98,10 +82,10 @@ span.m-left {
   font-size: .8rem;
 }
 
-.text a{
+.text a {
   padding: 12px 25px;
   background-color: none;
-  border:3px solid #ed5565;
+  border: 3px solid #ed5565;
   color: #ed5565;
   font-size: .8rem;
   letter-spacing: 2px;
@@ -117,7 +101,7 @@ span.m-left {
 }
 
 .text a::before {
-  content:'';
+  content: '';
   background-color: #ed5565;
   position: absolute;
   left: 0;
@@ -133,26 +117,26 @@ span.m-left {
 }
 
 .profile-image img {
-  width:450px;
+  width: 22rem;
   margin-bottom: 50px;
 }
 
-.about{
-  height: 100vh;
+.about {
+  height: 40rem;
   margin-top: 100px;
 }
 
-.about h1,
-.work h1{
+.about h1, .work h1 {
   font-size: 10rem;
   z-index: 0;
   opacity: .1;
+  color: azure;
 }
 
 .about-me-info {
-  max-width: 900px;
+  max-width: 50rem;
   background-color: #252627;
-  box-shadow: 0 0 1.2rem rgba(0,0,0,.25);
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
   padding: 50px;
   position: relative;
   top: -70px;
@@ -169,8 +153,7 @@ span.m-left {
   color: #bebebe;
 }
 
-.about-me-info p:nth-child(2),
-.about-me-info p:last-child {
+.about-me-info p:nth-child(2), .about-me-info p:last-child {
   margin-top: 30px;
 }
 
@@ -181,16 +164,23 @@ span.m-left {
   left: calc(100% - 100px);
   right: calc(100% - 100px);
   transform: translateX(calc(-100% + 100px));
-
 }
 
-.skills{
-  height: 100vh;
+@media (max-width: 900px) {
+  .profile-image img {
+    width: 15rem;
+    margin: 3rem 0;
+  }
+}
+
+.skills {
+  height: 45rem;
   margin-top: 1rem;
 }
 
-.skills h1,
-.contact h1 {
+.skills h1, .contact h1 {
+  color: blanchedalmond;
+  ;
   text-align: right;
   font-size: 10rem;
   opacity: .1;
@@ -207,6 +197,7 @@ span.m-left {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .html {
   display: flex;
   flex-wrap: wrap;
@@ -214,7 +205,7 @@ span.m-left {
   margin-bottom: 40px;
 }
 
-div[class^='tag-']{
+div[class^='tag-'] {
   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
   width: 120px;
   height: 30px;
@@ -222,7 +213,7 @@ div[class^='tag-']{
   margin-right: 30px;
 }
 
-div[class^='tag-'] p{
+div[class^='tag-'] p {
   color: #fff;
   text-align: left;
   padding-left: 10px;
@@ -239,7 +230,7 @@ div[class^='tag-'] p{
   margin-top: 7px;
 }
 
-div[class^='bar-']{
+div[class^='bar-'] {
   position: absolute;
   background-color: #48cfad;
   height: 10px;
@@ -247,10 +238,7 @@ div[class^='bar-']{
   margin: 2.7px;
 }
 
-.bar-html,
-.bar-css,
-.bar-javasript,
-.bar-react {
+.bar-html, .bar-css, .bar-javasript, .bar-react {
   width: calc(0 - 6px);
 }
 
@@ -268,13 +256,13 @@ div[class^='bar-']{
 }
 
 div[class^='category'] {
-  margin-top: 50px ;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 350px 1fr 1fr;
   grid-gap: 20px;
 }
 
-.work a{
+.work a {
   justify-self: center;
   position: relative;
   display: inline-block;
@@ -305,10 +293,9 @@ div.hideCategory {
   margin-top: 50px;
 }
 
-form input,
-form textarea {
+form input, form textarea {
   display: block;
-  width: 500px;
+  width: 35rem;
   padding: 20px;
   background-color: #252627;
   border: 3px solid #707070;
@@ -331,7 +318,7 @@ form input:last-child {
 
 footer hr {
   border: 2px solid #707070;
-  margin-top:80px ;
+  margin-top: 80px;
 }
 
 footer p {
@@ -340,6 +327,74 @@ footer p {
   font-size: 1.2rem;
   padding: 30px 0;
 }
-.work h1{
+
+.work h1 {
   padding-bottom: 3%;
+}
+
+@media (max-width: 750px) {
+  body{
+    text-align: center;
+  }
+  .main-info-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text h1 {
+    font-size: 2.1976em;
+  }
+  .text {
+    margin-top: 5rem;
+  }
+  .contact {
+    margin-bottom: 3rem;
+  }
+  .main-info-section {
+    height: 48rem;
+  }
+  .about {
+    height: 50rem;
+  }
+  .about h1 {
+    font-size: 8rem;
+  }
+  .about-me-info {
+    max-width: 20rem;
+    padding: 36px;
+    position: relative;
+    top: -70px;
+    left: 4.5rem;
+    right: 29%;
+    /* transform: translateX(-35%); */
+    z-index: 1;
+    margin-left: 16%;
+  }
+  .about img {
+    width: 19rem;
+    top: -20rem;
+    left: calc(100% - 5rem);
+  }
+  .skills,.work h1 {
+    font-size: 8rem;
+  }
+  .skills {
+    height: 55rem;
+  }
+  #contact form input {
+    width: 25rem;
+  }
+  #contact textarea {
+    width: 25rem;
+  }
+  #contact h1 {
+    font-size: 7rem;
+  }
+  .work-category button{
+    width: 9rem;
+  }
+  .showCategory{
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+  }
 }
